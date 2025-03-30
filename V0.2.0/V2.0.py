@@ -74,7 +74,6 @@ class CONTEXT(ctypes.Structure):
         ("Rsi", ctypes.c_ulonglong),
         ("Rdi", ctypes.c_ulonglong),
         ("Rip", ctypes.c_ulonglong),
-        # 其余字段省略，实际使用时需要完整定义
     ]
 
 # 工作线程类，用于后台执行耗时操作
