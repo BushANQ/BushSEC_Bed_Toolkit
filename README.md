@@ -1,5 +1,6 @@
 # BushSEC_Bed_Toolkit
-## (目前还是半成品，先留个坑，欢迎各位师傅交PR完善它)
+#### (目前还是半成品，先留个坑，欢迎各位师傅交PR完善它，
+#### 本项目旨在为文件分析和初步混淆避免静态识别的工具集合，目标是能够成为一个用于红(混淆)蓝(文件分析，溯源)对抗环境的基础工具集
 ## PE注入模块基于：https://github.com/BushANQ/BushSEC-PE-injected
 ## 杀毒软件检测模块基于：用python实现的Get_AV：https://github.com/BushANQ/Get_AV
 ### 后续的更新将在此仓库进行
