@@ -4,7 +4,10 @@
 #### PE注入模块基于：https://github.com/BushANQ/BushSEC-PE-injected
 #### 杀毒软件检测模块基于：用python实现的Get_AV：https://github.com/BushANQ/Get_AV
 #### 来自BushSEC开发的全套工具集(工具箱)
-
+依赖安装
+```bash
+pip install -r requirements.txt
+```
 主要功能包括:
 
 #### 1. 文件分析功能
