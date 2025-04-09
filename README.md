@@ -4,6 +4,10 @@
 #### PE注入模块基于：https://github.com/BushANQ/BushSEC-PE-injected
 #### 杀毒软件检测模块基于：用python实现的Get_AV：https://github.com/BushANQ/Get_AV
 #### 来自BushSEC开发的全套工具集(工具箱)
+## 📝 TODO
+
+* [x] 2025-4-9 感谢 @SATALiYan 师傅提交的PR，将本程序进行模块化处理
+
 依赖安装
 ```bash
 pip install -r requirements.txt
