@@ -5,7 +5,7 @@
 #### 杀毒软件检测模块基于：用python实现的Get_AV：https://github.com/BushANQ/Get_AV
 #### 来自BushSEC开发的全套工具集(工具箱)
 ## 📝 TODO
-
+* [x] 2025-4-9 @SATALiYan 师傅模块化出现了一些问题，暂时删除v0.2.1
 * [x] 2025-4-9 感谢 @SATALiYan 师傅提交的PR，将本程序进行模块化处理(v0.2.1)
 
 依赖安装
