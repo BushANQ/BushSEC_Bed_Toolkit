@@ -3,7 +3,7 @@
 #### 本项目旨在为文件分析和初步混淆以避免静态识别的工具集合，目标是能够成为一个用于红(混淆)蓝(文件分析，溯源)对抗环境的基础工具集
 #### PE注入模块基于：https://github.com/BushANQ/BushSEC-PE-injected
 #### 杀毒软件检测模块基于：用python实现的Get_AV：https://github.com/BushANQ/Get_AV
-#### MalwareHuntuer灵感来源于https://github.com/Fadouse/MalwareBazaarHunter
+#### MalwareHuntuer(恶意样本猎手)灵感来源于https://github.com/Fadouse/MalwareBazaarHunter
 ## 📝 TODO
 * [x] 
 
