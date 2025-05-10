@@ -115,6 +115,9 @@ pip install -r requirements.txt
 - 详细的状态反馈和错误处理
 - 支持自定义工具和命令执行
 
+#### 6. MalwareHuntuer(恶意样本猎手)(内测中...)
+支持通过tag标签搜索，VT检测率筛选以及完善的UI设计，灵感来源于https://github.com/Fadouse/MalwareBazaarHunter
+
 #### 使用说明
 
 1. 需要Python 3.x环境
